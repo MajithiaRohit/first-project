@@ -1,0 +1,22 @@
+<p>This is home page</p>
+<div *ngFor="let f of Friends" style="text-align: center;">
+    <div>name:  {{f.name}}</div>
+    <div>age:  {{f.age}}</div>
+    <div>city:  {{f.city}}</div>
+    <button (click)="deleteFriends(f.name)">
+        Gaddari Korbe 
+    </button>
+    <button (click)="editFriend(f.name)">
+        Edit friend 
+    </button>
+    <hr/>
+</div>
+<button (click)="addFriends()">
+    Add friend 
+</button>
+<button (click)="editButton()">
+    Edit friend 
+</button>
+<input type="text" [(ngModel)]="setName"/>
+<input type="text" [(ngModel)]="setAge"/>
+<input type="text" [(ngModel)]="setCity"/>
